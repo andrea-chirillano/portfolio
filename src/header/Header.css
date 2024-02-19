@@ -1,0 +1,70 @@
+@import url('https://db.onlinewebfonts.com/c/fcd427f1ebeea0bc781d457bd3a15c74?family=Hagrid+Trial+Regular');
+
+@font-face {
+    font-family: "Neue Machina Regular";
+    src: url("https://db.onlinewebfonts.com/t/38d41072aa88a50711d4d50dd0d50f6b.eot");
+    src: url("https://db.onlinewebfonts.com/t/38d41072aa88a50711d4d50dd0d50f6b.eot?#iefix") format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/38d41072aa88a50711d4d50dd0d50f6b.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/38d41072aa88a50711d4d50dd0d50f6b.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/38d41072aa88a50711d4d50dd0d50f6b.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/38d41072aa88a50711d4d50dd0d50f6b.svg#Neue Machina Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.header {
+    position: absolute;
+    left: 30px;
+    bottom: 125px;
+}
+
+.diamond {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    width: 75px; 
+    height: 75px; 
+    border: 7px solid white; 
+    background: transparent;
+    -webkit-transform: rotate(45deg) skew(15deg, 15deg);
+    -moz-transform: rotate(45deg) skew(15deg, 15deg);
+    -ms-transform: rotate(45deg) skew(15deg, 15deg);
+    -o-transform: rotate(45deg) skew(15deg, 15deg);
+    transform: rotate(45deg) skew(15deg, 15deg);
+}
+
+.square-one {
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    width: 250px;
+    height: 250px;
+    border: 10px solid white;
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+
+.square-two {
+    position: absolute;
+    top: 350px;
+    right: -65px;
+    width: 200px;
+    height: 200px;
+    border: 7px solid white;
+    background-color: transparent;
+}
+
+h1 {
+    font-family: "Hagrid Trial Regular", sans-serif;
+    font-size: 82px;
+    margin-top: 0; /* Elimina el margen superior predeterminado del h1 */
+    margin-bottom: 5px; /* Ajusta el margen inferior del h1 según sea necesario */
+}
+
+h2 {
+    font-family: "Neue Machina Regular", sans-serif;
+    font-size: 28px;
+    margin-top: 5px; /* Ajusta el margen superior del h2 según sea necesario */
+    margin-bottom: 0; /* Elimina el margen inferior predeterminado del h2 */
+}
