@@ -5,7 +5,9 @@ import "./Header.css";
 
 const UserInfo = () => {
     return (
-        <><div className="diamond"></div>
+        <><div className="triangle">
+            <div className="empty"></div>
+        </div>
         <div className="square-one"></div>
         <div className="square-two"></div><div className="header">
             <div style={{ textAlign: "left" }}></div>

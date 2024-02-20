@@ -16,22 +16,19 @@
 .header {
     position: absolute;
     left: 30px;
-    bottom: 125px;
+    top: 350px;
 }
 
-.diamond {
+.triangle {
     position: absolute;
-    top: 200px;
+    top: 150px;
     left: 60px;
-    width: 75px; 
-    height: 75px; 
-    border: 7px solid white; 
-    background: transparent;
-    -webkit-transform: rotate(45deg) skew(15deg, 15deg);
-    -moz-transform: rotate(45deg) skew(15deg, 15deg);
-    -ms-transform: rotate(45deg) skew(15deg, 15deg);
-    -o-transform: rotate(45deg) skew(15deg, 15deg);
-    transform: rotate(45deg) skew(15deg, 15deg);
+    --b: 15px;
+
+    width: 180px;
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% 100%, 100% 0, 0 0, 50% 100%, 50% calc(100% - var(--b)), calc(var(--b)*cos(30deg)) calc(var(--b)/2), calc(100% - var(--b)*cos(30deg)) calc(var(--b)/2), 50% calc(100% - var(--b)));
+    background: white;
 }
 
 .square-one {
@@ -58,13 +55,13 @@
 h1 {
     font-family: "Hagrid Trial Regular", sans-serif;
     font-size: 82px;
-    margin-top: 0; /* Elimina el margen superior predeterminado del h1 */
-    margin-bottom: 5px; /* Ajusta el margen inferior del h1 según sea necesario */
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 h2 {
     font-family: "Neue Machina Regular", sans-serif;
     font-size: 28px;
-    margin-top: 5px; /* Ajusta el margen superior del h2 según sea necesario */
-    margin-bottom: 0; /* Elimina el margen inferior predeterminado del h2 */
+    margin-top: 5px;
+    margin-bottom: 0;
 }
