@@ -1,16 +1,17 @@
 
-import './App.css'
-import Navbar from './navbar/Navbar.jsx'
-import Header from './header/Header.jsx'
+import './App.css';
+import Navbar from './navbar/Navbar.jsx';
+import Header from './header/Header.jsx';
 
 function App() {
-
   return (
     <div className="background">
-      <Navbar/>
-      <Header/>
+        <Navbar/>
+        <Header/>
+
     </div>
-  )
+
+  );
 }
 
-export default App
+export default App;
