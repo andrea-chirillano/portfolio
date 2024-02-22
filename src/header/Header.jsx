@@ -5,7 +5,7 @@ import "./Header.css";
 
 const UserInfo = () => {
     return (
-        <><div className="triangle">
+        <div className="background"><div className="triangle">
             <div className="empty"></div>
         </div>
         <div className="square-one"></div>
@@ -14,7 +14,8 @@ const UserInfo = () => {
             <h1 style={{ textAlign: "left" }}>Hi, I&apos;m Andrea Chirillano</h1>
             <h2 style={{ textAlign: "left" }}>and I&apos;m a fullstack developer.</h2>{" "}
 
-        </div></>
+        </div></div>
+        
     );
 };
 

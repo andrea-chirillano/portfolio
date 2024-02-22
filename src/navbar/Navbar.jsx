@@ -1,6 +1,5 @@
 import "./Navbar.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const openExternalLink = (url) => {
@@ -26,7 +25,7 @@ const Navbar = () => {
             </ul>
             <div className="icons-container">
                 <div className="icons">
-                    <button
+                    <button 
                         onClick={() =>
                             openExternalLink("https://www.linkedin.com/in/andreachirillano/")
                         }
