@@ -13,6 +13,15 @@
     font-display: swap;
 }
 
+.background{
+    background-image: linear-gradient(90deg, #020912, #80afee);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 .header {
     position: absolute;
     left: 30px;
