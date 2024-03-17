@@ -13,6 +13,87 @@
     font-display: swap;
 }
 
+@media (min-width: 700px) {
+    .proyect-one,
+    .proyect-two,
+    .proyect-three {
+        width: 350px;
+        height: 450px;
+        margin-right: 50px;
+    }
+    .image-one{
+        width: 250px;
+        height: 150px
+    }
+    
+    .image-two{
+        width: 300px;
+        height: 125px
+    }
+
+    .proyect-title{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 300px) {
+    .proyects-container{
+        margin-left: 75px;
+    }
+
+    .proyect-one,
+    .proyect-two,
+    .proyect-three {
+        width: 25vw;
+        height: 50vh;
+        margin-left: -30px;
+        font-size: 9px;
+        text-align: center;
+    }
+    .image-one{
+        width: 20vw;
+        height: 10vh;
+    }
+    
+    .image-two{
+        width: 20vw;
+        height: 7vh;
+    }
+
+    .proyect-title{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .proyects-container{
+        margin-left: 75px;
+    }
+
+    .proyect-one,
+    .proyect-two,
+    .proyect-three {
+        width: 25vw;
+        height: 50vh;
+        margin-left: -30px;
+        font-size: 9px;
+        text-align: center;
+    }
+    .image-one{
+        width: 20vw;
+        height: 10vh;
+    }
+    
+    .image-two{
+        width: 20vw;
+        height: 7vh;
+    }
+
+    .proyect-title{
+        font-size: 12px;
+    }
+}
+
 .portfolio{
     background: #020912;
     flex-direction: column;
@@ -20,21 +101,21 @@
 
 .proyects-container {
     display: flex;
+    margin-top: 10vh;
 }
 
 .proyect-title{
     color: #020912;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    text-align: center;
 }
 
 .proyect-one,
 .proyect-two,
 .proyect-three {
-    width: 350px;
-    height: 450px;
     background-image: linear-gradient(0, #bad8ff, #80afee);
+    border-radius: 10px;
     color: #020912;
     font-family: "Neue Machina Regular", sans-serif;
     justify-content: center;
@@ -42,9 +123,9 @@
     flex-direction: column;
     display: flex;
     transition: opacity 0.3s, transform 0.3s;
-    margin-right: 50px;
+    
 }
 
-.image{
+.image-one, .image-two{
     border: 5px solid #020912;
 }

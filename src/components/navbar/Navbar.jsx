@@ -17,7 +17,7 @@ const pageLink = {
         transition: 'opacity 1s, transform 1s',
     },
     Hovered: {
-        fontSize: '16px'
+        filter: 'brightness(2)'
     }
 };
 
@@ -49,16 +49,16 @@ const Navbar = () => {
         <nav>
             <ul>
                 <li>
-                    <a href="#" style={pageLink[isHoveredHome ? "Hovered" : "default"]} ref={linkHome}>Home</a>
+                    <a href="#" className="nav-route" style={pageLink[isHoveredHome ? "Hovered" : "default"]} ref={linkHome}>Home</a>
                 </li>
                 <li>
-                    <a href="#about-me" style={pageLink[isHoveredAboutMe ? "Hovered" : "default"]} ref={linkAboutMe}>About me</a>
+                    <a href="#about-me" className="nav-route" style={pageLink[isHoveredAboutMe ? "Hovered" : "default"]} ref={linkAboutMe}>About me</a>
                 </li>
                 <li>
-                    <a href="#portfolio" style={pageLink[isHoveredPortfolio ? "Hovered" : "default"]} ref={linkPortfolio}>Portfolio</a>
+                    <a href="#portfolio" className="nav-route" style={pageLink[isHoveredPortfolio ? "Hovered" : "default"]} ref={linkPortfolio}>Portfolio</a>
                 </li>
                 <li>
-                    <a href="#contact" style={pageLink[isHoveredContact ? "Hovered" : "default"]} ref={linkContact}>Contact</a>
+                    <a href="#contact" className="nav-route" style={pageLink[isHoveredContact ? "Hovered" : "default"]} ref={linkContact}>Contact</a>
                 </li>
             </ul>
             <div className="icons-container">
@@ -68,14 +68,14 @@ const Navbar = () => {
                             openExternalLink("https://www.linkedin.com/in/andreachirillano/")
                         }
                     >
-                        <FaLinkedin size={30} className="color-icon" />
+                        <FaLinkedin className="color-icon" />
                     </button>
                     <button style={externalLink[isHoveredIconGithub ? "Hovered" : "default"]} ref={iconGithub}
                         onClick={() =>
                             openExternalLink("https://github.com/andrea-chirillano")
                         }
                     >
-                        <FaGithub size={30} className="color-icon" />
+                        <FaGithub className="color-icon" />
                     </button>
                 </div>
             </div>

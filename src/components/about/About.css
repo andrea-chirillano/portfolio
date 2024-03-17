@@ -13,16 +13,126 @@
     font-display: swap;
 }
 
+@media (min-width: 700px) {
+    .triangle {
+        top: 20vh;
+    }
+    .header {
+        top: 35vh;
+    }
+    h1{
+        font-size: 85px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .skill-icons > * {
+        margin-right: 10px; 
+    }
+    .lenguages-icons{
+        font-size: 30px;
+    }
+    .text, .hard-skills {
+        display: flex;
+        margin-top: 60vh;
+        margin-right: 15vw;
+    }
+    .text{
+        margin-left: 100px;
+    }
+    .hard-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width: 700px) and (min-width: 300px) {
+    .triangle {
+        top: 25vh;
+    }
+    .header {
+        top: 45vh;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 10px;
+    }
+    .skill-icons > * {
+        margin-right: 5px; 
+    }
+    .lenguages-icons{
+        font-size: 15px;
+    }
+    .text{
+        font-size: 10px;
+    }
+    .text, .hard-skills {
+        display: flex;
+        margin-top: 50vh;
+        margin-right: 5vw;
+    }
+    .text{
+        margin-left: 50px;
+        width: 40vw;
+    }
+    .hard-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width: 300px) {
+    .triangle {
+        top: 15vh;
+    }
+    .header {
+        top: 35vh;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 10px;
+    }
+    .skill-icons > * {
+        margin-right: 5px; 
+    }
+    .lenguages-icons{
+        font-size: 15px;
+    }
+    .text {
+        font-size: 10px;
+        margin-top: 80vh;
+        margin-left: -10vw;
+        width: 85vw;
+        height: 20vh;
+        display: flex; 
+        justify-content: center;
+        text-align: center;
+    }
+    .hard-skills{
+        margin-top: 40vh;
+        margin-left: -70vw;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .header {
     position: absolute;
-    top: 200px;
     text-align: center;
 }
 
 .triangle {
     position: absolute;
-    top: 15vh;
-    left: 50vw;
+    margin-left: 0;
     --b: 10px;
 
     width: 100px;
@@ -33,14 +143,12 @@
 
 h1 {
     font-family: "Hagrid Trial Regular", sans-serif;
-    font-size: 82px;
     margin-top: 0;
     margin-bottom: 0px;
 }
 
 h2 {
     font-family: "Neue Machina Regular", sans-serif;
-    font-size: 28px;
     margin-top: 5px;
     margin-bottom: 0;
 }
@@ -64,21 +172,8 @@ h2 {
 }
 
 .text, .hard-skills {
-    margin-top: 65vh;
-    display: flex;
-    margin-right: 15vw;
     font-family: "Neue Machina Regular", sans-serif;
     color: white;
-}
-
-.text{
-    margin-left: 100px;
-}
-
-.hard-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .title-hard-skills{
@@ -91,8 +186,4 @@ h2 {
     margin-right: 5px;
     align-items: center; 
     justify-content: center;
-}
-
-.skill-icons > * {
-    margin-right: 10px; 
 }

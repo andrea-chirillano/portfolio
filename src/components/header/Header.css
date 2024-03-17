@@ -3,7 +3,23 @@
 }
 
 .image-home{
-    margin-top: 100px;
-    width: 200px;
+    margin-top: 80px;
     filter: drop-shadow(15px 15px 15px black);
+    width: 800px;
+    height: 600px;
 }
+
+
+@media (max-width: 700px) {
+    .image-home{
+        width: 95vw;
+        height: 40vh;
+    }
+}
+
+@media (max-width: 300px) {
+    .image-home{
+        width: 95vw;
+        height: 35vh;
+    }
+} 
