@@ -67,28 +67,28 @@ const About = () => {
                     <div className="title-hard-skills">Hard skills: <br/> </div> 
                     <div className="skill-icons">
                         <div style={hoverIcons[isHoveredAngular ? "Hovered" : "default"]} ref={targetAngular} onClick={() => openExternalLink("https://angular.io/")}>
-                            <FaAngular color="white" size={30} /> 
+                            <FaAngular color="white" className="lenguages-icons" /> 
                         </div>
                         <div style={hoverIcons[isHoveredJavascript ? "Hovered" : "default"]} ref={targetJavascript} onClick={() => openExternalLink("https://developer.mozilla.org/en-US/docs/Web/JavaScript")}>
-                            <FaJs color="white" size={30} />
+                            <FaJs color="white" className="lenguages-icons" />
                         </div>
                         <div style={hoverIcons[isHoveredReactJS ? "Hovered" : "default"]} ref={targetReactJS} onClick={() => openExternalLink("https://react.dev/")}>
-                            <FontAwesomeIcon icon={faReact} color="white" size="2x" />
+                            <FontAwesomeIcon icon={faReact} color="white" className="lenguages-icons" />
                         </div>
                         <div style={hoverIcons[isHoveredDocker ? "Hovered" : "default"]} ref={targetDocker} onClick={() => openExternalLink("https://www.docker.com/")}>
-                            <FaDocker color="white" size={30} />
+                            <FaDocker color="white" className="lenguages-icons" />
                         </div>
                         <div style={hoverIcons[isHoveredNodeJS ? "Hovered" : "default"]} ref={targetNodeJS} onClick={() => openExternalLink("https://nodejs.org/en")}>
-                            <FaNodeJs color="white" size={30} />
+                            <FaNodeJs color="white" className="lenguages-icons" />
                         </div>
                         <div style={hoverIcons[isHoveredGolang ? "Hovered" : "default"]} ref={targetGolang} onClick={() => openExternalLink("https://go.dev/")}>
-                            <FontAwesomeIcon icon={faGolang} color="white" size="2x" />
+                            <FontAwesomeIcon icon={faGolang} color="white" className="lenguages-icons" />
                         </div>
                         <div style={hoverIcons[isHoveredPython ? "Hovered" : "default"]} ref={targetPython} onClick={() => openExternalLink("https://www.python.org/")}>
-                            <FaPython color="white" size={30} />
+                            <FaPython color="white" className="lenguages-icons" />
                         </div>
                         <div style={hoverIcons[isHoveredPHP ? "Hovered" : "default"]} ref={targetPHP} onClick={() => openExternalLink("https://www.php.net/")}>
-                            <FaPhp color="white" size={30} />
+                            <FaPhp color="white" className="lenguages-icons" />
                         </div>
                     </div>
 

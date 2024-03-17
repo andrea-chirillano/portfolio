@@ -1,6 +1,6 @@
 import "./Contact.css";
 import { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
@@ -20,7 +20,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_6j4gd5h', 'template_5ljp8ds', e.target, 'W5qpAwNWAmFDClrde')
+        emailjs.sendForm('service_6j4gd5h', 'template_i0ymcon', e.target, 'W5qpAwNWAmFDClrde')
             .then((result) => {
                 console.log(result.text);
                 alert('Message sent successfully');

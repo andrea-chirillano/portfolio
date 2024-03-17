@@ -7,8 +7,6 @@ import proyectThreeImage from '../assets/images/proyect-three.png';
 
 const hoverStyle = {
     default: {
-        width: '350px',
-        height: '450px',
         backgroundImage: 'linear-gradient(0, #bad8ff, #80afee)',
         color: '#020912',
         fontFamily: 'Neue Machina Regular, sans-serif',
@@ -48,14 +46,14 @@ const Portfolio = () => {
             <div className="proyects-container">
                 <a className="proyect-one" onClick={() => openExternalLink("https://andrea-chirillano.github.io/Calculator/")} style={hoverStyle[isHoveredOne ? "Hovered" : "default"]} ref={targetOneRef}>
                     <div className="proyect-title"><p>Calculator</p></div>
-                    <img className="image" src={proyectOneImage} style={{ width: '250px', height: '150px' }} alt="Project One" />
+                    <img className="image-one" src={proyectOneImage} alt="Project One" />
                     <br/>
                     Calculator developed in <br/>
                     Angular 17.
                 </a>
                 <a className="proyect-two" onClick={() => openExternalLink("https://andrea-chirillano.github.io/weather/")} style={hoverStyle[isHoveredTwo ? "Hovered" : "default"]} ref={targetTwoRef}>
                     <div className="proyect-title"><p>Weather API</p></div>
-                    <img className="image" src={proyectTwoImage} style={{ width: '300px', height: '125px' }} alt="Project Two" />
+                    <img className="image-two" src={proyectTwoImage} alt="Project Two" />
                     <br/>
                     Weather web application made <br/>
                     with Angular 17, Python and <br/>
@@ -64,7 +62,7 @@ const Portfolio = () => {
                 </a>
                 <a className="proyect-three" style={hoverStyle[isHoveredThree ? "Hovered" : "default"]} ref={targetThreeRef}>
                     <div className="proyect-title"><p>Pokemon shirt store (Developing)</p></div>
-                    <img className="image" src={proyectThreeImage} style={{ width: '300px', height: '125px' }} alt="Project Three" />
+                    <img className="image-two" src={proyectThreeImage} alt="Project Three" />
                     <br/>
                     Shirt store made with Angular on <br/>
                     the front, on the backend with Java, <br/>
