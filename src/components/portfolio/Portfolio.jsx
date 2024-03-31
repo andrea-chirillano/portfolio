@@ -34,7 +34,7 @@ const Portfolio = () => {
         },
         {
             element: (
-                <a className="proyect-three" onClick={() => openExternalLink("link-proyect-three")}>
+                <a className="proyect-three">
                     <DirectionDemo text1="Pokemon shirt store (Developing)" text2="Shirt store made with Angular on the front, on the backend with Java, Spring and MySQL database." value={proyectThreeImage} />
                 </a>
             )
