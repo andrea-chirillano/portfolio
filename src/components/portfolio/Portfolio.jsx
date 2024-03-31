@@ -1,37 +1,13 @@
+import DirectionDemo from "../features/direction-aware-hover-demo";
+import proyectOneImage from '../assets/images/proyect-one.jpg';
+import proyectTwoImage from '../assets/images/proyect-two.jpg';
+import proyectThreeImage from '../assets/images/proyect-three.jpg';
+import proyectFourImage from '../assets/images/proyect-four.jpg';
 import "./Portfolio.css";
-import { useRef } from "react";
-import useHover from "@react-hook/hover";
-import proyectOneImage from '../assets/images/proyect-one.png';
-import proyectTwoImage from '../assets/images/proyect-two.png';
-import proyectThreeImage from '../assets/images/proyect-three.png';
+import { useState } from 'react';
 
-const hoverStyle = {
-    default: {
-        backgroundImage: 'linear-gradient(0, #bad8ff, #80afee)',
-        color: '#020912',
-        fontFamily: 'Neue Machina Regular, sans-serif',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        display: 'flex',
-        transition: 'opacity 0.3s, transform 0.3s',
-        marginRight: '50px'
-    },
-    Hovered: {
-        transform: 'scale(1.1)',
-        filter: 'brightness(105%)'
-    }
-};
 
 const Portfolio = () => {
-    const targetOneRef = useRef(null);
-    const targetTwoRef = useRef(null);
-    const targetThreeRef = useRef(null);
-
-    const isHoveredOne = useHover(targetOneRef);
-    const isHoveredTwo = useHover(targetTwoRef);
-    const isHoveredThree = useHover(targetThreeRef);
-
     const openExternalLink = (url) => {
         console.log('Open external link:', url);
         try {
@@ -41,33 +17,68 @@ const Portfolio = () => {
         }
     };
 
-    return(
+    const items = [
+        {
+            element: (
+                <a className="proyect-one" onClick={() => openExternalLink("https://andrea-chirillano.github.io/Calculator/")}>
+                    <DirectionDemo text1="Calculator" text2="Calculator developed in Angular 17" value={proyectOneImage} />
+                </a>
+            )
+        },
+        {
+            element: (
+                <a className="proyect-two" onClick={() => openExternalLink("https://andrea-chirillano.github.io/weather/")}>
+                    <DirectionDemo text1="Weather API" text2="Weather web application made with Angular 17, Python and Flask, using the Openweathermap API." value={proyectTwoImage} />
+                </a>
+            )
+        },
+        {
+            element: (
+                <a className="proyect-three" onClick={() => openExternalLink("link-proyect-three")}>
+                    <DirectionDemo text1="Pokemon shirt store (Developing)" text2="Shirt store made with Angular on the front, on the backend with Java, Spring and MySQL database." value={proyectThreeImage} />
+                </a>
+            )
+        },
+        {
+            element: (
+                <a className="proyect-four" onClick={() => openExternalLink("https://andrea-chirillano.github.io/ecommerce-pizza/")}>
+                    <DirectionDemo text1="Pizza e-commerce" text2="Basic pizza ecommerce store frontend design made with ReactJS and Vite." value={proyectFourImage} />
+                </a>
+            )
+        },
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? items.length - 1 : prevIndex - 1
+        );
+    };
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === items.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    return (
         <div className="portfolio" id="portfolio">
-            <div className="proyects-container">
-                <a className="proyect-one" onClick={() => openExternalLink("https://andrea-chirillano.github.io/Calculator/")} style={hoverStyle[isHoveredOne ? "Hovered" : "default"]} ref={targetOneRef}>
-                    <div className="proyect-title"><p>Calculator</p></div>
-                    <img className="image-one" src={proyectOneImage} alt="Project One" />
-                    <br/>
-                    Calculator developed in <br/>
-                    Angular 17.
-                </a>
-                <a className="proyect-two" onClick={() => openExternalLink("https://andrea-chirillano.github.io/weather/")} style={hoverStyle[isHoveredTwo ? "Hovered" : "default"]} ref={targetTwoRef}>
-                    <div className="proyect-title"><p>Weather API</p></div>
-                    <img className="image-two" src={proyectTwoImage} alt="Project Two" />
-                    <br/>
-                    Weather web application made <br/>
-                    with Angular 17, Python and <br/>
-                    Flask, using the Openweathermap <br/>
-                    API.
-                </a>
-                <a className="proyect-three" style={hoverStyle[isHoveredThree ? "Hovered" : "default"]} ref={targetThreeRef}>
-                    <div className="proyect-title"><p>Pokemon shirt store (Developing)</p></div>
-                    <img className="image-two" src={proyectThreeImage} alt="Project Three" />
-                    <br/>
-                    Shirt store made with Angular on <br/>
-                    the front, on the backend with Java, <br/>
-                    Spring and MySQL database.
-                </a>
+            <div className="slider-container">
+            <div className="slides" style={{ transform: `translateX(-${currentIndex * (100 / (items.length * 2))}%)` }}>
+                    {items.map((item, index) => (
+                        <div key={index} className="slide">
+                            {item.element}
+                        </div>
+                    ))}
+                    {items.map((item, index) => (
+                        <div key={index + items.length} className="slide">
+                            {item.element}
+                        </div>
+                    ))}
+                </div>
+                <button className="prev" onClick={prevSlide}> &lt; </button>
+                <button className="next" onClick={nextSlide}> &gt; </button>
             </div>
         </div>
     );

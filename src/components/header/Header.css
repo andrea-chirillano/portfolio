@@ -1,5 +1,5 @@
 .background{
-    background-image: linear-gradient(90deg, #020912, #80afee);
+    background-image: linear-gradient(90deg, #B298DC, #A663CC);
 }
 
 .image-home{
@@ -7,6 +7,10 @@
     filter: drop-shadow(15px 15px 15px black);
     width: 800px;
     height: 600px;
+}
+
+.aurora{
+    padding-top: 100px;
 }
 
 

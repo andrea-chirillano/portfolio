@@ -44,15 +44,15 @@ const Contact = () => {
                 <h2>Contact me</h2>
                 <form ref={form} onSubmit={sendEmail}>
                     <div>
-                        <label htmlFor="from_name">Name:</label>
+                        <label htmlFor="from_name" className="input-text">Name:</label>
                         <input type="text" id="from_name" name="from_name" value={formData.from_name} onChange={handleChange} required />
                     </div>
                     <div>
-                        <label htmlFor="from_email">Email:</label>
+                        <label htmlFor="from_email" className="input-text">Email:</label>
                         <input type="email" id="from_email" name="from_email" value={formData.from_email} onChange={handleChange} required />
                     </div>
                     <div>
-                        <label htmlFor="message">Message:</label>
+                        <label htmlFor="message" className="input-text">Message:</label>
                         <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
                     </div>
                     <button type="submit" value="Send">Send message</button>

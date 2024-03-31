@@ -1,10 +1,10 @@
 import "./Header.css";
-import backgroundLaptop from "../assets/images/laptop-background.png";
+import { AuroraBackgroundDemo } from "../features/aurora-background-demo";
 
 const Header = () => {
     return (
         <div className="background" id="home">
-            <img className="image-home" src={backgroundLaptop}/>
+            <AuroraBackgroundDemo className="aurora"/>
         </div>
     );
 };
