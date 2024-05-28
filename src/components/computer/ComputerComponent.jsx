@@ -1,15 +1,14 @@
 import "./ComputerComponent.css";
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import  { Environment, OrbitControls } from '@react-three/drei'; 
-import Computer from '../../../public/Computer.jsx';
+import Computer from '../../../public/Computer';
 
 const ComputerComponent = () => {
-    const [count, setCount] = useState(0)
     return (
         <div className="computer-background">
-            <Canvas>
-                <ambientLight intensity={1}/>
+            <Canvas className="computer">
+                <ambientLight />
                 <OrbitControls enableZoom={false}/>
                 <Suspense fallback={null}>
                     <Computer />

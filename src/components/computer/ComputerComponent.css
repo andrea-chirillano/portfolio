@@ -2,6 +2,20 @@
     background: #B8D0EB;
 }
 
-canvas {
-    height: 100vh !important;
+@media (min-width: 700px) {
+    .computer {
+        position: absolute;
+        right: 0vw;
+        top: 10%;
+        height: 150vh !important;
+        width: 150vw !important;
+    }
+}
+@media (max-width: 700px) {
+    .computer {
+        position: absolute;
+        top: 10%;
+        height: 100vh !important;
+        width: 100vw !important;
+    }
 }

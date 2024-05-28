@@ -1,0 +1,10 @@
+.room-background{
+    background: #6F2DBD;
+}
+
+.room {
+    position: absolute;
+    top: 50%;
+    height: 100vh !important;
+    width: 100vw !important;
+}
