@@ -16,7 +16,7 @@
 }
 
 .portfolio{
-    background: #6F2DBD;
+    background: linear-gradient(0, #B8D0EB, #6F2DBD);
     flex-direction: column;
 }
 

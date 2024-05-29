@@ -13,17 +13,17 @@ export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
     ...props
 }) => {
     return (
-        <main>
+        <main className="w-full">
             <div
                 className={cn(
-                    "relative flex flex-col h-[100vh] items-center justify-center transition-bg",
+                    "relative flex flex-col h-[100vh] w-[100vw] items-center justify-center transition-bg",
                     className
                 )}
                 {...props}
             >
                 {/* Capa para el fondo */}
                 <div
-                    className="absolute inset-0 overflow-hidden"
+                    className="absolute inset-0 w-full h-full overflow-hidden"
                     style={{ opacity: 0.7 }} // Establecer la opacidad del fondo
                 >
                     <div
@@ -49,7 +49,7 @@ export const AuroraBackground: React.FC<AuroraBackgroundProps> = ({
                     ></div>
                 </div>
                 {/* Capa para las auroras */}
-                <div className="relative flex flex-col h-full items-center justify-center">
+                <div className="relative flex flex-col h-full w-full items-center justify-center">
                     {children}
                 </div>
             </div>

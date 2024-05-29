@@ -1,0 +1,22 @@
+.computer-background{
+    background: #B8D0EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    .computer {
+        position: absolute;
+        right: 0vw;
+        top: 10%;
+    }
+}
+@media (max-width: 700px) {
+    .computer {
+        position: absolute;
+        left: 100px;
+        height: 100vh !important;
+        width: 100vw !important;
+    }
+}

@@ -32,7 +32,8 @@ nav {
 .background,
 .portfolio,
 .about,
-.contact-background {
+.contact-background,
+.computer-background {
     display: flex;
     align-items: center;
     justify-content: center;
