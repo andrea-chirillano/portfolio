@@ -41,7 +41,7 @@ const RoomComponent = () => {
                     rotation={cameraRotation} 
                 />
                 <OrbitControls 
-                    enableZoom={true} 
+                    enableZoom={false} 
                     minDistance={cameraDistance} 
                     maxDistance={cameraDistance + 500} 
                     target={[0, 0, 0]} // Focus on the center of the room
