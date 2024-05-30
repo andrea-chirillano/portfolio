@@ -17,7 +17,8 @@
 @media (min-width: 700px) {
     .room {
         position: absolute;
-        top: 50%;
+        top: 10vh;
+        left: 5vw;
         height: 90vh !important;
         width: 90vw !important;
     }
