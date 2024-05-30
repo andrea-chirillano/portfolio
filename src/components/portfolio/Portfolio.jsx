@@ -65,7 +65,7 @@ const Portfolio = () => {
     return (
         <div className="portfolio" id="portfolio">
             <div className="slider-container">
-            <div className="slides" style={{ transform: `translateX(-${currentIndex * (100 / (items.length * 2))}%)` }}>
+            <div className="slides" style={{ transform: `translateX(-${currentIndex * (100 / (items.length * 3))}%)` }}>
                     {items.map((item, index) => (
                         <div key={index} className="slide">
                             {item.element}

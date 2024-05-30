@@ -10,19 +10,16 @@ const RoomComponent = () => {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 700) {
-                setCameraDistance(700); // Increase the distance for smaller screens
+                setCameraDistance(700); 
             } else {
-                setCameraDistance(500); // Default distance
+                setCameraDistance(500);
             }
         };
 
-        // Set initial distance based on current window width
         handleResize();
 
-        // Add event listener for window resize
         window.addEventListener('resize', handleResize);
 
-        // Clean up event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -44,7 +41,7 @@ const RoomComponent = () => {
                     enableZoom={false} 
                     minDistance={cameraDistance} 
                     maxDistance={cameraDistance + 500} 
-                    target={[0, 0, 0]} // Focus on the center of the room
+                    target={[0, 0, 0]} 
                 />
                 <Suspense fallback={null}>
                     <Room />
